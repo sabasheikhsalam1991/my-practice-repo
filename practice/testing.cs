@@ -9,4 +9,5 @@ public class Testing
     public string Name7 { get; set; } = string.Empty;
     public string Name20 { get; set; } = string.Empty;
     public string Name21 { get; set; } = string.Empty;
+    public string Name22 { get; set; } = string.Empty;
 }
