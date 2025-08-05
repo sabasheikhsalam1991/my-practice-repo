@@ -7,4 +7,8 @@ public class Testing
     public string Name3 { get; set; } = string.Empty;
     public string Name101 { get; set; } = string.Empty;
     public string Name102 { get; set; } = string.Empty;
+    public string Name1 { get; set; } = string.Empty;
+    public string Name4 { get; set; } = string.Empty;
+    public string Name5 { get; set; } = string.Empty;
+    public string Name6 { get; set; } = string.Empty;
 }
