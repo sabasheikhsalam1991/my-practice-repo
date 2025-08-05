@@ -4,4 +4,5 @@ public class Testing
     public string Name { get; set; } = string.Empty;
     public string Name1 { get; set; } = string.Empty; 
     public string Name2 { get; set; } = string.Empty;
+    public string Name3 { get; set; } = string.Empty;
 }
