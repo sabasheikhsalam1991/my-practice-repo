@@ -11,5 +11,6 @@ public class Testing
     public string Name21 { get; set; } = string.Empty;
     public string Name22 { get; set; } = string.Empty;
     public string Name23 { get; set; } = string.Empty;
+    public string Name24 { get; set; } = string.Empty;
 }
 }
