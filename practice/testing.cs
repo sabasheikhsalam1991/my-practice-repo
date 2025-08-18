@@ -24,5 +24,13 @@ public class Testing
     public string Name28 { get; set; } = string.Empty;
     public string Name29 { get; set; } = string.Empty;
     public string Name30 { get; set; } = string.Empty;
+    public string Name31 { get; set; } = string.Empty;
+    public string Name32 { get; set; } = string.Empty;
+    public string Name33 { get; set; } = string.Empty;
+    public string Name34 { get; set; } = string.Empty;
+    public string Name35 { get; set; } = string.Empty;
+    public string Name36 { get; set; } = string.Empty;
+    public string Name37 { get; set; } = string.Empty;
+    public string Name38 { get; set; } = string.Empty;
 }
 }
