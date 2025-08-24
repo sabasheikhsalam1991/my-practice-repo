@@ -1,3 +1,9 @@
+on:
+  push:
+    branches:
+      - main   # 👈 only runs for main branch
+
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
