@@ -1,0 +1,36 @@
+name: Enforce Approval Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-approvals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get changed files
+        id: files
+        run: |
+          echo "CHANGED_FILES=$(jq -r '.pull_request.head.sha' $GITHUB_EVENT_PATH)" >> $GITHUB_ENV
+          git fetch origin ${{ github.base_ref }}
+          git diff --name-only origin/${{ github.base_ref }}...${{ github.sha }} > changed_files.txt
+          cat changed_files.txt
+
+      - name: Load owners rules
+        id: owners
+        run: |
+          echo '${{ secrets.OWNERS_JSON }}' > owners.json
+          cat owners.json
+
+      - name: Check approvals
+        run: |
+          CHANGED=$(cat changed_files.txt)
+          OWNERS=$(cat owners.json)
+
+          echo "📂 Files changed: $CHANGED"
+          echo "👥 Owners: $OWNERS"
+
+          # (Here you can add your custom logic to check if sabahat123 approved)
