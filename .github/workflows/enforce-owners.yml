@@ -1,17 +1,30 @@
+# .github/workflows/main-approval-deploy.yml
+name: Approval + Deploy
+
 on:
+  pull_request:
+    branches:
+      - main   # ✅ enforce approval for PRs into main
   push:
     branches:
-      - main   # 👈 only runs for main branch
-
+      - main   # ✅ deploy after merge to main
 
 jobs:
-  deploy:
+  approval-check:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    environment: main-protection   # 👈 secrets come from this environment
+    environment: main-protection   # 👈 requires environment approval
+    steps:
+      - name: Enforce Approval
+        run: echo "✅ Approval enforced via environment reviewers"
+
+  deploy:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: main-protection   # 👈 also requires approval before deploying
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Deploy with secret
         run: echo "Using secret ${{ secrets.PROD_API_KEY }}"
-
