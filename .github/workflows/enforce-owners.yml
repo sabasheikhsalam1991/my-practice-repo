@@ -18,13 +18,7 @@ jobs:
       - name: Enforce Approval
         run: echo "✅ Approval enforced via environment reviewers"
 
-  deploy:
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    environment: main-protection   # 👈 also requires approval before deploying
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+
 
       - name: Deploy with secret
         run: echo "Using secret ${{ secrets.PROD_API_KEY }}"
