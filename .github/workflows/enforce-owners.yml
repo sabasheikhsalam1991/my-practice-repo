@@ -1,5 +1,5 @@
 # .github/workflows/main-approval-deploy.yml
-name: Approval + Deploy
+
 
 on:
   pull_request:
