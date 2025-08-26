@@ -47,6 +47,7 @@ public class Testing
     public string Name50 { get; set; } = string.Empty;
     public string Name51 { get; set; } = string.Empty;
       public string Name52 { get; set; } = string.Empty;
+    public string Name200{ get; set; } = string.Empty;
 }
 
 }
