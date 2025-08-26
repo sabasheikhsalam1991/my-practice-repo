@@ -5,9 +5,7 @@ on:
   pull_request:
     branches:
       - main   # ✅ enforce approval for PRs into main
-  push:
-    branches:
-      - main   # ✅ deploy after merge to main
+ 
 
 jobs:
   approval-check:
