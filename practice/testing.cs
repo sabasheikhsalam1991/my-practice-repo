@@ -35,7 +35,7 @@ public class Testing
     public string Name38 { get; set; } = string.Empty;
     public string Name39 { get; set; } = string.Empty;
     public string Name40 { get; set; } = string.Empty;
-    public string Name41{ get; set; } = string.Empty;
+    public string Name41 { get; set; } = string.Empty;
     public string Name42 { get; set; } = string.Empty;
     public string Name43 { get; set; } = string.Empty;
     public string Name44 { get; set; } = string.Empty;
@@ -44,7 +44,13 @@ public class Testing
     public string Name47 { get; set; } = string.Empty;
     public string Name48 { get; set; } = string.Empty;
     public string Name49 { get; set; } = string.Empty;
-
+    public string Name50 { get; set; } = string.Empty;
+    public string Name51 { get; set; } = string.Empty;
+    public string Name52 { get; set; } = string.Empty;
+    public string Name200{ get; set; } = string.Empty;
+    public string Name201 { get; set; } = string.Empty;
+    public string Name202 { get; set; } = string.Empty;
+    public string Name203 { get; set; } = string.Empty;
 }
 
 }
