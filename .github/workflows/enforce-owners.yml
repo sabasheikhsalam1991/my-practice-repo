@@ -20,5 +20,4 @@ jobs:
 
 
 
-      - name: Deploy with secret
-        run: echo "Using secret ${{ secrets.PROD_API_KEY }}"
+     
